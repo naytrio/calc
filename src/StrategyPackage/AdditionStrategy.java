@@ -1,10 +1,12 @@
 package StrategyPackage;
 
 import CalcPackege.Calc;
+import InputPackege.Input;
 
-public class AdditionStrategy implements DoubleOperationStrategy {
+public class AdditionStrategy implements StrategyCalc {
     @Override
-    public double execute(double numberA, double numberB) throws Exception {
+    public double execute(double numberA) throws Exception {
+        double numberB = Input.InputNumber();
         return Calc.addition(numberA, numberB);
     }
 }

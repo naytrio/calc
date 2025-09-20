@@ -1,14 +1,12 @@
 package CommandPackege;
 
-import StrategyPackage.UnaryOperationStrategy;
+import StrategyPackage.StrategyCalc;
 import StrategyPackage.FactorialStrategy;
 
-public class FactorialCommand implements UnaryOperationComand {
-    private UnaryOperationStrategy strategy;
-    private double number;
+public class FactorialCommand implements Command {
+    private StrategyCalc strategy;
 
-    public FactorialCommand(double number) {
-        this.number = number;
+    public FactorialCommand() {
         this.strategy = new FactorialStrategy();
     }
 

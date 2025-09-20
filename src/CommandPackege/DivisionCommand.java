@@ -1,20 +1,17 @@
 package CommandPackege;
 
-import StrategyPackage.DoubleOperationStrategy;
+import StrategyPackage.StrategyCalc;
 import StrategyPackage.DivisionStrategy;
 
-public class DivisionCommand implements DoubleOperationComand {
-    private double numberA, numberB;
-    private DoubleOperationStrategy strategy;
+public class DivisionCommand implements Command {
+    private StrategyCalc strategy;
 
-    public DivisionCommand(double numberA, double numberB) {
-        this.numberA = numberA;
-        this.numberB = numberB;
+    public DivisionCommand() {
         this.strategy = new DivisionStrategy();
     }
 
     @Override
-    public double execute(double numberA, double numberB) throws Exception {
-        return strategy.execute(numberA, numberB);
+    public double execute(double numberA) throws Exception {
+        return strategy.execute(numberA);
     }
 }

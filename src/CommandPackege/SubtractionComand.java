@@ -1,19 +1,17 @@
 package CommandPackege;
-import StrategyPackage.DoubleOperationStrategy;
+import InputPackege.Input;
+import StrategyPackage.StrategyCalc;
 import StrategyPackage.SubtractionStrategy;
 
-public class SubtractionComand implements DoubleOperationComand {
-    private DoubleOperationStrategy strategy;
-    private double numberA, numberB;
+public class SubtractionComand implements Command {
+    private StrategyCalc strategy;
 
-    public SubtractionComand(double numberA, double numberB) {
-        this.numberA = numberA;
-        this.numberB = numberB;
+    public SubtractionComand() {
         this.strategy = new SubtractionStrategy();
     }
 
     @Override
-    public double execute(double numberA, double numberB) throws Exception {
-        return strategy.execute(numberA, numberB);
+    public double execute(double numberA) throws Exception {
+        return strategy.execute(numberA);
     }
 }

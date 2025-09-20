@@ -4,7 +4,7 @@ import CalcPackege.Calc;
 import CustomExeptionPackege.FactorialException;
 import ValidPackage.Valid;
 
-public class FactorialStrategy implements UnaryOperationStrategy {
+public class FactorialStrategy implements StrategyCalc {
     @Override
     public double execute(double number) throws Exception {
         if (Valid.factorialValid(number)) {
