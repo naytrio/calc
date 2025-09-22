@@ -3,7 +3,7 @@ package TestPackege;
 import CalcPackege.Calc;
 import CustomExeptionPackege.PowerException;
 import CustomExeptionPackege.FactorialException;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ class CalcTest extends Test{
         correctResults.add(120.0);
         correctResults.add(24.0);
 
-        Assert.assertEquals(testResults, correctResults);
+        Assertions.assertEquals(testResults, correctResults);
     }
 
     @org.junit.jupiter.api.Test
@@ -35,7 +35,7 @@ class CalcTest extends Test{
         correctResult.add(5.0+4.2);
         correctResult.add(4.2+7.9);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 
     @org.junit.jupiter.api.Test
@@ -51,7 +51,7 @@ class CalcTest extends Test{
         correctResult.add(5.0-4.2);
         correctResult.add(4.2-7.9);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 
     @org.junit.jupiter.api.Test
@@ -67,7 +67,7 @@ class CalcTest extends Test{
         correctResult.add(5.0*4.2);
         correctResult.add(4.2*7.9);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 
     @org.junit.jupiter.api.Test
@@ -83,7 +83,7 @@ class CalcTest extends Test{
         correctResult.add(5.0/4.2);
         correctResult.add(4.2/7.9);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 
     @org.junit.jupiter.api.Test
@@ -97,6 +97,6 @@ class CalcTest extends Test{
         correctResult.add(311.16960000000006);
         correctResult.add(256.0);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 }

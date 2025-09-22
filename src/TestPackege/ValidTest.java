@@ -1,7 +1,7 @@
 package TestPackege;
 
 import ValidPackage.Valid;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class ValidTest extends Test{
         correctResult.add(false);
         correctResult.add(true);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
     @org.junit.jupiter.api.Test
     void degreeValid(){
@@ -31,7 +31,7 @@ public class ValidTest extends Test{
         correctResult.add(false);
         correctResult.add(true);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
     @org.junit.jupiter.api.Test
     void operationValid(){
@@ -44,6 +44,6 @@ public class ValidTest extends Test{
         correctResult.add(true);
         correctResult.add(false);
 
-        Assert.assertEquals(testResult, correctResult);
+        Assertions.assertEquals(testResult, correctResult);
     }
 }
